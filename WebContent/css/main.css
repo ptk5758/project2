@@ -1,0 +1,1656 @@
+@charset "UTF-8";
+
+body{
+	width: 1500px;
+	margin: 0 auto;
+	background-color: #f0f0f0;
+}
+@font-face{
+	font-family: "메이플";
+	src: url("../font/maple/maplestorylight.ttf");
+}
+@font-face{
+	font-family: "메이플";
+	src: url("../font/maple/maplestorybold.ttf");
+	font-weight: bold;
+}
+@font-face{
+	font-family: "배찌";
+	src: url("../font/bazzi/bazzi.ttf");
+}
+@font-face{
+	font-family: "넥슨고딕";
+	src: url("../font/nexon/nexon_gothicotflight.woff");
+}
+@font-face{
+	font-family: "넥슨고딕";
+	src: url("../font/nexon/nexon_gothicotfbold.woff");
+	font-weight: bold;
+}
+/*--------------------------------메인 메인메뉴---------------------------------  */
+
+.mainContainer{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.mainContainer_Item{
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to right, #c58f46, #eeddc6);
+	padding: 25px;
+	border-radius: 15px;
+	border: 3px solid#474747;
+	margin: 22px;
+}
+.mainContainer_Title{
+	font-family: "넥슨고딕";
+	font-size: 34px;
+	font-weight: bold;
+}
+.mainContainer_Item:hover > .mainContainer_Title{
+	animation-name: font_color_change;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+@keyframes font_color_change{
+	0% {color: #000000;}
+	25% {color: #ff6060;}
+	50% {color: #18a8f1;}
+	75% {color: #98ff1a;}
+	100% {color:#fff;}
+}
+.mainContainer_Title_item{
+	font-size: 24px;
+	color: #fff;
+	margin: 12px;
+	font-weight: bold;
+}
+.mainContainer_Title_item span{
+	padding: 12px;
+	cursor: pointer;
+}
+.mainContainer_Title_item > span:hover{
+	animation-name: font_color_change;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------헤더 메뉴 메인메뉴---------------------------------  */
+
+
+/* .communtiy{
+	border: 1px solid#000000;
+	position: absolute;
+	width: 150px;
+}
+
+.hidden_menu{
+	position: absolute;
+	width: 180px;
+}
+.hidden_menu > div {
+	background-color: #cdcdcd;
+	display: none;
+}
+.communtiy:hover > .hidden_menu > div{
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.communtiy:hover > .hidden_menu > div:hover{
+	cursor: pointer;
+} */
+/*--------------------------------메인---------------------------------  */
+.main_container{
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+/*--------------------------------헤더---------------------------------  */
+.header{
+	
+}
+.header_menu{
+	display: flex;
+	justify-content: center;
+}
+.header_menu_list{
+	font-size: 22px;
+	font-weight: bold;
+	background-color: #b98f42;
+	padding: 8px;
+	width: 200px;
+	text-align: center;
+	margin: 3px;
+	position: relative;
+}
+.header_show_menu{
+	
+}
+.header_hidden_menu{
+	display: none;
+	position: absolute;
+	background-color: #b98f42;
+ 	left:0;
+}
+.header_menu_list:hover > .header_hidden_menu{
+	display: block;
+	width: 100%;
+	
+}
+.header_hidden_menu > div:hover{
+	background-color: #a37e3a;
+	cursor: pointer;
+}
+.header_logo{
+	margin: 0 auto;
+	width: 65%;
+}
+.header_logo > img{
+	width: 100%;
+}
+/*--------------------------------미들---------------------------------  */
+.middle{
+	display: flex;
+	flex-direction: row-reverse;
+	min-height: 1500px;
+	/* height: 800px; 언잰가 뺄것 혹은 최소높이 800px고정시키는 css 배워오기 */
+}
+/*--------------------------------어사이드(오른쪽)---------------------------------  */
+.aside{
+	/* background-color: #d29c53; */
+	background: linear-gradient( to bottom,#d29c53,#ae772d);
+}
+.aside_login{
+	
+}
+.aside_login_border{
+	padding: 10px;
+}
+.aside_login_border > input{
+	font-size: 18px;
+	height: 1.5em;
+}
+.aside_login_button{
+	text-align: center;
+}
+.aside_login_button > input{
+	font-size: 18px;
+	width: 92%;
+}
+.aside_menu{
+	display: flex;
+	font-size: 14px;
+	justify-content: space-around;
+	padding-top: 5px;
+}
+.aside_menu_item{
+	cursor: pointer;
+}
+/*-----------------------------북마크-----------------------------  */
+.aside_bookmark{
+	padding-top: 15px;
+}
+.aside_bookmark_item{
+	margin: 0 auto;
+	width: 92%;
+	background-color: #fff;
+}
+.aside_bookmark_text{/*------"즐겨찾기한책"---------*/
+	text-align: center;
+	border-bottom: 1px solid#000000;
+}
+.aside_bookmark_item_text{
+	padding: 5px;
+	font-size: 12px;
+}
+/*-----------------------------어사이드 배너-----------------------------  */
+.aside_benner{
+	padding-top: 15px;
+}
+.aside_benner_img{
+	text-align: center;
+}
+.aside_benner_img > img{
+	width: 227px;
+}
+/*-----------------------------어사이드 유저 세션 정보-----------------------------  */
+.aside_usersession{
+	background-color: #fff;
+	width: 92%;
+	margin: 0 auto;
+	margin-top: 15px;
+	font-size: 18px;
+}
+.aside_logout{
+	background-color: #fff;
+	cursor: pointer;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+/*-------------------------------컨탠츠(왼쪽) 앵간한건 여기드감---------------------------------  */
+.contents{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.contents_title{
+	display: flex;
+	justify-content: space-around;
+}
+.contents_item{
+	margin: 0 auto;
+	width: 90%;
+}
+.contents_item_title{
+	text-align: center;
+}
+.contents_item_title_select{
+	display: flex;
+	justify-content: space-around;
+}
+.contents_main_books{
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+.contents_main_books_item{
+	text-align: center;
+}
+.test_ranking_border_img > img{
+	width: 200px;
+}
+/*--------------------------------회원가입---------------------------------  */
+.signUp{
+	width: 100%;
+	border-top: 3px solid #000000;
+	border-bottom: 3px solid #000000;
+}
+.signUp_container{
+	width: 50%;
+	margin: 0 auto;
+}
+.signUp_border{
+	display: flex;
+	justify-content: space-around;
+}
+.signUp_text{
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid #d9d9d9;
+}
+.signUp_input{
+	
+}
+.signUp_option{
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #d9d9d9;
+}
+.signUp_text_item{
+	padding: 19px;
+	font-size: 18px;
+}
+.signUp_input_item{
+	padding: 15px;
+}
+.signUp_input_item > input{
+	height: 100%;
+}
+.signUp_input_item > input {
+	font-size: 18px;
+	height: 1.5em;
+}
+.signUp_option_item{
+	padding: 23px;
+	font-size: 12px;
+}
+.signUp_button{
+	text-align: center;
+	padding-top: 15px;
+}
+.signUp_button > input{
+	font-size: 22px;
+	font-weight: bold;
+	padding: 8px;
+	color: #fff;
+	background-color: #2a2a2a;
+}
+/*--------------------------------마이페이지---------------------------------*/
+.mypage{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.mypage_border{
+	display: flex;
+	font-size: 22px;
+	min-height: 800px;
+}
+.mypage_left{
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	border: 3px solid#29abe2;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #46bcf4;
+	color: #ebf8fe;
+}
+.mypage_left_item{
+	padding: 3px;
+	cursor: pointer;
+}
+
+.mypage_right{
+	display: flex;
+	flex-direction: column;
+/* 	padding-left: 35px; */
+	background-color: #f1fafe;
+	width: 100%;
+}
+.mypage_right_item{
+	margin: 15px;
+}
+.userupdateButton{
+	border: 1px solid#d9d9d9;
+	background-color: #474747;
+	color: #fff;
+	padding: 8px;
+	text-align: center;
+	cursor: pointer;
+	width: 300px;
+}
+/*--------------------------------마이페이지 굿즈샵---------------------------------*/
+.mypage_Shoplist{
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.mypage_ShopList_num{
+	width: 100px;
+	text-align: center;
+	align-self: center;
+	font-size: 18px;
+	font-family: "Impact";
+}
+.mypage_ShopList_img{
+	width: 150px;
+	text-align: center;
+	align-self: center;
+}
+/* .mypage_ShopList_img > img{
+	width: 150px;
+	height: 150px;
+} */
+.mypage_ShopList_name{
+	width: 280px;
+	text-align: center;
+	align-self: center;
+	font-size: 18px;
+}
+.mypage_ShopList_option{
+	width: 120px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+.mypage_ShopList_price{
+	width: 150px;
+	text-align: center;
+	align-self: center;
+	font-size: 18px;
+}
+.mypage_ShopList_signdate{
+	width: 170px;
+	text-align: center;
+	align-self: center;
+	font-size: 18px;
+}
+.mypage_ShopList_ref{
+	width: 100px;
+	text-align: center;
+	align-self: center;
+	font-size: 18px;
+}
+.list_top{
+	font-weight: bold;
+	font-size: 22px;
+}
+/*-------------------------------굿즈샵-------------------------------------------  */
+.shop{
+	width: 80%;
+	margin: 0 auto;
+}
+.shop_title{
+	display: flex;
+	justify-content: space-around;
+	font-size: 24px;
+}
+.shop_title_item{
+	border: 2px solid #000000;
+	padding: 5px;
+	width: 150px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	font-family: "배찌";
+	font-weight: bold;
+}
+.cub{
+	padding: 8px;
+}
+.water{
+	position: absolute;
+	left: -20px;
+	top: 52px;
+	/* background-color: #a4d9f0; */
+	background: linear-gradient( to bottom,#a4d9f0,#2ba6db);
+	width: 200px;
+	height: 200px;
+	z-index: -1;
+}
+.shop_border{
+	display: flex;
+	margin-top: 15px;
+}
+.shop_category{
+	width:150px;
+	/* background-color: #7ad0fa; */
+	background: linear-gradient( to bottom,#7ad0fa,#099fe8);
+	color: #fff;
+}
+.shop_category_item{
+	text-align: center;
+	margin-top: 15px;
+	cursor: pointer;
+	font-size: 22px;
+	font-family: "메이플";
+	padding: 8px;
+}
+.shop_category_item:active{
+	background-color:#98ff1a;
+}
+.shop_category_item:hover{
+	background-color: #39b9f7;
+}
+.shop_list{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 25px;
+	padding: 20px;
+	grid-auto-rows: 400px;
+	align-items: center;
+	background-color: #fff;
+	border: 5px solid#cf9950;
+}
+.shop_item{
+	text-align: center;
+	min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	cursor: pointer;
+	border: 2px solid#000000;
+	padding: 12px;
+	background-color: #fff;
+	border-radius: 15px;
+	position: relative;
+	box-shadow: 5px 5px 8px;
+}
+.shop_item:hover{
+	background-color: #e3e3e3;
+}
+.shop_item_Subject{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 50px;
+	font-family: "넥슨고딕";
+}
+.shop_item_img{
+	align-self: center;
+	border: 1px solid#000000;
+}
+.shop_item_img img {
+	height: 200px;
+	width: 200px;
+}
+.shop_item_ItemPrice{
+	font-size: 20px;
+	margin-top: 50px;
+}
+.clip{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	left: -5px;
+	top: -19px;
+}
+.shop_option_posting{
+	border: 1px solid #000000;
+	padding: 8px;
+	float: right;
+	margin-top: 50px;
+	border-radius: 15px;
+	font-size: 18px;
+	font-family: "넥슨고딕";
+	background-color: #72ccf9;
+	color: #fff;
+}
+.shop_option_posting:hover{
+	background-color:#49bff8;
+}
+.shop_option_posting:active{
+	background-color:#98ff1a;/*초록색*/
+}
+/*-------------------------------굿즈샵 포스팅-------------------------------------------  */
+.shop_posting{
+	width: 70%;
+}
+.shop_posting_item{
+	margin: 20px;
+}
+.shop_posting_subject{
+	margin: 20px;
+}
+.shop_posting_subject input{
+	font-size: 24px;
+	padding: 8px;
+	width: 80%;
+}
+.shop_posting_title{
+	margin: 20px;
+	font-size: 22px;
+}
+.shop_posting_title select{
+	font-size: 22px;
+	width: 82%;
+	padding: 4px;
+}
+.shop_posting_category{
+	margin: 20px;
+	font-size: 22px;
+}
+.shop_posting_category select{
+	font-size: 22px;
+	width: 82%;
+	padding: 4px;
+}
+.shop_posting_itemName{
+	margin: 20px;
+}
+.shop_posting_itemName input{
+	font-size: 22px;
+	padding: 8px;
+	width: 80%;
+}
+.shop_posting_itemPrice{
+	margin: 20px;
+}
+.shop_posting_itemPrice input{
+	font-size: 22px;
+	padding: 8px;
+	width: 80%;
+}
+.shop_posting_itemcomment{
+	margin: 20px;
+}
+.shop_posting_itemcomment textarea{
+	min-width: 81%;
+	min-height: 800px;
+	font-size: 18px;
+}
+/*-------------------------------굿즈샵 상세페이지-------------------------------------------  */
+.shop_view{
+	width: 50%;
+	margin: 0 auto;
+	border-top: 3px solid#000000;
+	padding-top: 15px;
+}
+.shop_view_item{
+	margin: 0 auto;
+	margin: 15px;
+	border-bottom: 3px solid#000000
+}
+.view_item_stat{
+	display: flex;
+	justify-content: center;
+}
+.item_img > img {
+	width: 300px;
+	height: 300px;
+}
+.item_text{
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.bukkit_form{
+	display: flex;
+}
+.bukkit_count{
+	align-self: center;
+}
+.bukkit_button{
+	background-color: #474747;
+	color: #fff;
+	padding: 5px;
+	margin: 15px;
+	cursor: pointer;
+	font-size: 18px;
+}
+.item_text_text{
+	display: flex;
+	margin: 15px;
+}
+.item_text_Subject{
+	width: 100px;
+}
+.item_text_Category{
+	width: 100px;
+}
+.item_text_Price{
+	width: 100px;
+}
+.item_text_Like{
+	width: 100px;
+}
+.shop_comment{
+	text-align: center;
+}
+.shop_comment_img > img{
+	max-width: 380px;
+	max-height: 380px;
+}
+.shop_view_user_border{
+	/* border-top: 2px solid#6d6d6d; */
+}
+.shop_view_user{
+	display: flex;
+	margin: 8px;
+}
+.shop_view_user_text{
+	flex: 1;
+	border-right: 2px solid#d9d9d9;
+	text-align: center;
+}
+.shop_view_user_item{
+	flex: 3;
+	text-align: center;
+}
+.shop_view_user{
+	font-size: 18px;
+}
+.shop_view_user_comment{
+	/* margin-top: 50px; */
+}
+.shop_view_user_comment_form{
+	display: flex;
+	justify-content: space-around;
+	font-size: 22px;
+	border-top: 1px solid#000000;
+	padding: 8px;
+}
+.user_comment_textarea{
+	min-width: 320px;
+	height: 80px;
+	font-size: 18px;
+	
+}
+.shop_user_comment_user{
+	width: 150px;
+	align-self: center;
+	text-align: center;
+}
+.shop_user_comment_img > img{
+	max-width: 220px;
+	max-height: 220px;
+}
+.shop_user_comment_comment{
+	width: 350px;
+	align-self: center;
+}
+.shop_user_comment_option{
+	width: 200px;
+	align-self: center;
+	text-align: center;
+	font-size: 18px;
+}
+.usercomment_delete{
+	width: 22px;
+	height: 22px;
+}
+.shop_delete_option{
+	display: flex;
+	justify-content: flex-end; 
+	position: relative;
+}
+.shop_reply{
+	display: flex; 
+	justify-content: space-between;
+}
+/*--------------------------------장바구니---------------------------------  */
+.shop_bukkit{
+	width: 80%;
+}
+.bukkittop{
+	background-color: #000000;
+	color: #fff;
+	text-align: center;
+}
+.shop_bukkit_item{
+	display: flex;
+	justify-content: space-around;
+	font-size: 18px;
+	border-top: 1px solid#000000;
+	min-height: 150px;
+	font-family: "넥슨고딕";
+	padding: 8px;
+}
+.shop_bukkit_item:nth-child(1){
+	min-height: 25px;
+	font-weight: bold;
+	align-items: center;
+}
+.bukkit_item_num{
+	width: 50px;
+	align-self: center;
+	text-align: center;
+	font-family: "impact";
+}
+.bukkit_item_img{
+	width: 150px;
+	align-self: center;
+	cursor: pointer;
+	text-align: center;
+}
+.bukkit_item_name{
+	width: 300px;
+	align-self: center;
+	display: flex;
+	cursor: pointer;
+}
+.bukkit_item_delete{
+	width: 25px;
+	height: 25px;
+	margin-left: 25px;
+	cursor: pointer;
+}
+.bukkit_item_count{
+	width: 50px;
+	align-self: center;
+	text-align: center;
+}
+.bukkit_item_price{
+	width: 100px;
+	align-self: center;
+	text-align: center;
+}
+.bukkit_item_totalparice{
+	width: 100px;
+	align-self: center;
+	text-align: center;
+}
+.bukkit_item_postinguser{
+	width: 120px;
+	align-self: center;
+	text-align: center;
+}
+.bukkit_footer{
+	display: flex;
+	flex-direction: column;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 25px;
+	border-top: 2px solid#000000;
+	padding-top: 25px;
+}
+.bukkit_footer_item{
+	text-align: center;
+	padding-top: 10px;
+}
+.bukkit_footer_item input{
+	text-align: center;
+	font-size: 24px;
+	font-family: "넥슨고딕";
+	
+}
+/*--------------------------------커뮤니티 게시판---------------------------------  */
+.list{
+	width: 80%;
+	height: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	
+	
+}
+.list_contents{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid#000000;
+	background-color: #fff;
+}
+.list_contenes:hover > div{
+	background-color: #c5c5c5;
+}
+/*--------------------------------커뮤니티 게시판 뷰 페이지---------------------------------  */
+.viewPage{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+.viewPage_option{
+	display: flex;
+}
+/*--------------------------------커뮤니티 포스팅---------------------------------  */
+.posting{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+.posting_form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 800px;
+}
+.posting_subject > input {
+	font-size: 22px;
+	height: 1.5em;
+}
+.posting_select > select {
+	font-size: 22px;
+	height: 1.5em;
+}
+.posting_textarea textarea {
+	font-size: 18px;
+	width: 600px;
+	height: 500px;
+}
+.posting_button > input {
+	font-size: 20px;
+	padding: 8px;
+	background-color: #000000;
+	color:#fff;
+}
+/*--------------------------------아이디 찾기---------------------------------  */
+.user_id_search{
+	width: 50%;
+}
+/*--------------------------------어드민 페이지 헤더---------------------------------  */
+.admin_main{
+	
+}
+.admin_menu{
+	display: flex;
+	justify-content: space-between;
+}
+.admin_menu_item{
+	text-align: center;
+	width: 150px;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid#000000;
+	padding: 8px;
+	cursor: pointer;
+}
+
+/*--------------------------------어드민 유저페이지---------------------------------  */
+.admin_border{
+	display: flex;
+	text-align: center;
+}
+.admin_border_left{
+	width: 150px;
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+}
+.admin_border_right{
+	width: 100%;
+}
+.admin_UserOption_Button{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+.UserOption_Button_Item{
+	width: 150px;
+	text-align: center;
+	padding: 8px;
+	border: 2px solid#000000;
+	border-radius: 5px;
+	background-color: #434a4d;
+	color: #33b5f2;
+	font-weight: bold;
+	cursor: pointer;
+}
+.admin_left_menu{
+	background-color: #474747;
+	color: #fff;
+	padding: 8px;
+	font-weight: bold;
+}
+.admin_user_list{
+	display: flex;
+	justify-content: center;
+	padding: 8px;
+	margin: 5px;
+	border: 1px solid#000000;
+}
+.admin_user_list:hover{
+	background-color: #cfcfcf;
+}
+.admin_user_list_top{
+	font-weight: bold;
+	border: 3px solid#000000;
+}
+.admin_user_list_num{
+	width: 100px;
+	text-align: center;
+	border-left: 2px solid#d9d9d9;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_name{
+	width: 150px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_nickname{
+	width: 150px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+	color:blue;
+	cursor: pointer;
+}
+.admin_user_list_id{
+	width: 180px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_level{
+	width: 100px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_signdate{
+	width: 150px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_active{
+	width: 380px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_warning{
+	width: 80px;
+	text-align: center;
+	border-right: 2px solid#d9d9d9;
+}
+.admin_user_list_check{
+	text-align: center;
+	width: 50px;
+	border-right: 2px solid#d9d9d9;
+}
+/*--------------------------------어드민 유저정보 페이지---------------------------------  */
+.UserInfo_border{
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	background-color: #ececec;
+	border: 3px solid#000000;
+	border-radius: 5px;
+}
+.UserInfo_border_left{
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	border-right: 2px solid#000000;
+}
+.UserInfo_Item_text{
+	width: 140px;
+}
+.UserInfo_border_right{
+	width: 55%;
+}
+.UserInfo_Item{
+	display: flex;
+	padding: 13px;
+	font-size: 22px;
+}
+.UserActive_Info{
+	padding: 13px;
+}
+.UserActive_Info_Item{
+	padding: 10px;
+}
+.UserActive_Info_Text{
+	font-size: 22px;
+	font-weight: bold;
+}
+.levelinput{
+	font-size: 18px;
+	width: 45px;
+	height: 1.5em;
+	margin-left: 25px;
+	padding-left: 8px;
+}
+.levelbutton{
+	margin-left: 15px;
+	padding: 4px;
+	background-color: #474747;
+	color: #fff;
+	font-size: 16px;
+}
+.UserActive_overflow{
+	width: 600px;
+	height: 150px;
+	overflow: auto;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: 3px solid #414141;
+}
+.UserActive_overflow_Item{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3px;
+	font-size: 18px;
+	border: 2px solid#d9d9d9;
+}
+.overflow_Num{
+	width: 50px;
+	text-align: center;
+	align-self: center;
+}
+.overflow_Subject{
+	width: 250px;
+	text-align: center;
+	align-self: center;
+	cursor: pointer;
+}
+.overflow_Subject:hover{
+	background-color: #d9d9d9;
+}
+.overflow_Signdate{
+	width: 140px;
+	text-align: center;
+	align-self: center;
+}
+.overflow_Ref{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+.overflow_Like{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+.overflow_check{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+/*--------------------------------어드민 굿즈샵 페이지---------------------------------  */
+.admin_Shop_Search{
+	display: flex;
+	justify-content: flex-start;
+	margin: 15px;
+}
+.admin_Shop_Search_select{
+	
+}
+.admin_Shop_Search_select > select{
+	font-size: 18px;
+	font-weight: bold;
+	height: 35px;
+}
+.admin_Shop_Search_input{
+	padding-left: 15px;
+}
+.admin_Shop_Search_input > input{
+	font-size: 18px;
+	height: 29px;
+}
+.admin_Shop_Search_button{
+	padding-left: 15px;
+}
+.admin_Shop_Search_button > input{
+	height: 35px;
+}
+.admin_Shop_Search_option{
+	align-self: center;
+	padding-left: 15px;
+	font-size: 18px;
+}
+.admin_Shop_Search_Date{
+	padding-left: 15px;
+	align-self: center;
+}
+.admin_Shop_Search_Date > input{
+	font-weight: bold;
+}
+.admin_ShopBorder{
+	margin-left: 12px;
+	background-color: #e5e5e5;
+}
+.admin_ShopList{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	border: 2px solid#474747;
+	font-size: 18px;
+}
+.admin_Shop_Num{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Img{
+	width: 150px;
+	text-align: center;
+	align-self: center;
+	position: relative;
+}
+.admin_Shop_Img > img{
+	align-self: center;
+	max-width: 150px;
+	max-height: 150px;
+}
+.blind{
+	position: absolute; 
+	top: 38%;
+	font-size: 22px;
+	font-weight: bold;
+	color: #f3f3f3;
+}
+.admin_Shop_Name{
+	width: 200px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_User{
+	width: 150px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Option{
+	width: 80px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Price{
+	width: 120px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Signdate{
+	width: 120px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Ref{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Like{
+	width: 70px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Check{
+	width: 50px;
+	text-align: center;
+	align-self: center;
+}
+.admin_Shop_Check input{
+	width: 25px;
+	height: 25px;
+}
+.testclass{
+	border: 1px solid#000000;
+}
+/*--------------------------------어드민 이벤트 페이지---------------------------------  */
+.admin_Event{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #e3e3e3;
+	min-height: 800px;
+	padding-top: 25px;
+}
+.admin_Event_Button{
+	display: flex;
+	padding: 8px;
+	justify-content: space-around;
+	font-size: 22px;
+	font-weight: bold;
+}
+.admin_Event_Button_Item{
+	width: 180px;
+	border: 2px solid#000000;
+	border-radius: 15px;
+	padding: 8px;
+	background-color: #474747;
+	color: #fff;
+	cursor: pointer;
+}
+.admin_Event_List{
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	margin: 15px;
+	border: 2px solid #000000;
+	padding: 8px;
+	background-color: #fff;
+}
+.admin_Event_List:hover{
+	background-color: #ebebeb;
+}
+.admin_Event_Num{
+	width: 120px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Title{
+	width: 300px; 
+	text-align: center;
+	align-self: center;
+	color: blue;
+	cursor: pointer;
+}
+.admin_Event_Signdate{
+	width: 320px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Thread{
+	width: 120px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Option{
+	width: 150px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Ref{
+	width: 120px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Check{
+	width: 120px; 
+	text-align: center;
+	align-self: center;
+}
+.admin_Event_Check > input{
+	width: 30px;
+	height: 30px;
+}
+.top{
+	font-weight: bold;
+}
+/*--------------------------------이벤트 포스팅---------------------------------  */
+.eventPosting{
+	width: 80%;
+	margin: 0 auto;
+}
+.eventPosting_Border{
+	font-size: 22px;
+}
+.eventPosting_title{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.eventPosting_title input{
+	font-size: 22px;
+	padding: 8px;
+	width: 800px;
+}
+.eventPosting_contents{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.eventPosting_contents textarea{
+	font-size: 22px;
+	padding: 8px;
+	width: 800px;
+	height: 660px;
+	font-family: "";
+}
+#font_Option{
+	display: flex;
+	margin-bottom: 25px;
+}
+#font_Option select{
+	font-size: 18px;
+	height: 32px;
+}
+#font_Option_Text{
+	padding-right: 25px;
+}
+#font_Option_FontFamily{
+	padding-right: 25px;
+}
+#font_Option_FontSize{
+	padding-right: 25px;
+}
+#font_Option_FontColor{
+	
+}
+.eventPosting_img{
+	display: flex;
+	font-size: 16px;
+	margin: 13px;
+}
+.eventPosting_img > div:nth-child(1){
+	width: 100px;
+	text-align: center;
+}
+.eventDate{
+	display: flex;
+}
+.eventPeriod{
+	padding-bottom: 25px;
+}
+/*--------------------------------이벤트---------------------------------  */
+.eventBanner{
+	position: relative;
+	cursor: pointer;
+}
+.eventBanner > img{
+	width: 1000px; 
+	height: 220px; 
+	border: 1px solid#000000;
+}
+.endEvent{
+	filter: brightness(30%);
+}
+.event_Text{
+	position: absolute; 
+	top: 32%; 
+	left: 40%; 
+	color:#000000;
+	font-size: 1px;
+	font-weight: bold;
+	opacity: 0;
+}
+.endEvent_Text{
+	position: absolute; 
+	top: 32%; 
+	left: 34%; 
+	color:#fff;
+	font-size: 48px;
+	font-family: "넥슨고딕";
+}
+.eventSubject{
+	font-size: 28px;
+}
+/*--------------------------------이벤트 상세 페이지---------------------------------  */
+.eventViewPage{
+	margin: 0 auto;
+	width: 80%;
+}
+.eventView_Border{
+	border: 3px solid#000000;
+	border-radius: 15px;
+	background-color: #fffaee;
+	min-height: 800px;
+}
+.eventView_subject{
+	font-size: 32px;
+	font-weight: bold;
+	padding: 15px;
+	background-color: #bce2f3;
+	border-radius: 15px 15px 0px 0px;
+	/* background: linear-gradient(#000000,#fff); */
+}
+.eventView_signdate{
+	font-size: 22px;
+	font-weight: lighter;
+	padding: 3px;
+	padding-left: 8px;
+	background-color: #eeeeee;
+	font-family: "넥슨고딕";
+}
+.eventView_img{
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	/* background-image: url("/img/aestheticspace_tumblr.png");
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
+.eventImg{
+	max-width: 1000px;
+	text-align: center;
+}
+.eventView_contents{
+	width: 98%;
+	margin: 0 auto;
+	
+}
+/*--------------------------------출석체크---------------------------------  */
+.attend_container{
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+.attend{
+	border: 2px solid#5fbff3;
+	border-radius: 15px;
+	margin: 0 auto;
+	font-size: 18px;
+}
+.attend td{
+	width: 120px;
+	height: 80px;
+	border: 2px solid#000000;
+	border-radius: 15px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.attend tr td:nth-child(1){
+	/* color: red; */
+	background-color: #ff6c6c;
+}
+.attend tr td:nth-child(7){
+	/* color: blue; */
+	background-color: #8ec7ff;
+}
+.tr2 td {
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: #fff;
+}
+#now_Month{
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+}
+.tr1 td{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+}
+.normal{
+	background-color: #dfb884;
+}
+.attend_Input_Main{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.attend_Input_Form{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.attend_Input_User{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	width: 150px;
+	height: 38px;
+}
+.attend_Input_Input > input{
+	font-size: 24px;
+	font-weight: bold;
+	width: 300px;
+	height: 32px;
+}
+.attend_Input_Button > input{
+	font-size: 24px;
+	font-weight: bold;
+	margin-left: 25px;
+}
+.attend_Today{
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+}
+.attend_Today_List{
+	font-size: 18px;
+	border: 1px solid#000000;
+	margin: 8px;
+	width: 1000px;
+}
+.Today_List_user{
+	display: flex;
+	padding: 10px;
+}
+.Today_List_username{
+	font-size: 28px;
+	font-weight: bold;
+	display: flex;
+}
+.Today_List_signdate{
+	font-size: 14px;
+	align-self: flex-end;
+	padding-left: 15px;
+	color: #c0c0c0;
+	display: inline-block;
+}
+.Today_List_option{
+	display: flex;
+	justify-content: flex-end;
+	color: #000000;
+	align-self: center;
+}
+#today_List_Update{
+	font-size: 22px;
+	font-weight: bold;
+	border: 2px solid#c0c0c0;
+	border-radius: 25px;
+	padding: 6px;
+	color: blue;
+	cursor: pointer;
+}
+#today_List_Update:hover{
+	background-color: #e4e4e4;
+}
+#today_List_Delete{
+	font-size: 22px;
+	font-weight: bold;
+	border: 2px solid#c0c0c0;
+	border-radius: 25px;
+	padding: 6px;
+	color: red;
+	cursor: pointer;
+}
+#today_List_Delete:hover{
+	background-color: #e4e4e4;
+}
+.Today_List_comment{
+	font-size: 22px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+/*--------------------------------이벤트 페이지---------------------------------  */
+.eventPage{
+	margin: 0 auto;
+}
+.eventPage_Item{
+	margin: 15px;
+}
+/*--------------------------------푸터---------------------------------  */
+.footer{
+	
+}
+/*--------------------------------테스트---------------------------------  */
+.main{
+	width: 90%;
+	background-color: #fff;
+}
+.test_header{
+	display: flex;
+	justify-content: center;
+}
+.test_contents{
+	display: flex;
+	flex-direction: column;
+}
+.test_ranking_title{
+	display:flex;
+	justify-content: center;
+}
+
+.test_ranking_border{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 25px;
+}
